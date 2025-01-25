@@ -9,7 +9,7 @@ const __dirname = dirname(__filename)
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.dogflork.com',
+  site: 'https://www.gamer.vercel.app',
   integrations: [svelte(), sitemap(), robots()],
   output: 'static', // or 'hybrid'
   server: {
