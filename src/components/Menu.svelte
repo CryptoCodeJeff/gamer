@@ -64,6 +64,7 @@
       transform: rotate(90deg);
       top: -40px;
       width: 100%;
+      filter: drop-shadow(7px 7px 10px 0px rgba(0, 0, 0, 0.75));
     }
   }
 </style>

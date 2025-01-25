@@ -107,16 +107,11 @@ const description = '¿How did TeTheGamer lost millions of dollars in one click?
             flex-direction: column;
           }
 
-          .video {
-            position: relative;
-
-            img {
-              position: absolute;
-            }
-
-            video {
-              height: 600px;
-            }
+          video {
+            display: inline-block;
+            width: 90%;
+            max-width: 300px;
+            box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.75);
           }
 
           .text {
@@ -153,10 +148,7 @@ const description = '¿How did TeTheGamer lost millions of dollars in one click?
 
     <div id="historia">
       <!--<img src="/assets/dogflork3.png" width="300px" alt="" />-->
-      <div class="video">
-        <img src="public/assets/marcoVideo.png" alt="" />
-        <video src="public/assets/epico.mp4"></video>
-      </div>
+      <video src="/assets/epico.mp4" autoplay controls loop></video>
       <div class="text">
         <p>An unofficial coin dedicated to TeTheGamer was created, and the developer sent 70% of the total supply to TeTheGamer.</p>
 
