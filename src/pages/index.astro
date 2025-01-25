@@ -1,0 +1,195 @@
+---
+import Menu from '@/components/Menu.svelte'
+import CA from '@/components/CA.svelte'
+import Svg from '@/components/Svg.svelte'
+
+const title = 'ARENO CTO'
+const description = 'Conoce la historia de ARENO CTO y DOGFLORK!✨'
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/jpg" href="/assets/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet" />
+
+    <title>{title}</title>
+    <style lang="scss" is:global>
+      @use 'src/sass/global.scss' as *;
+
+      * {
+        font-family: 'Quintessential';
+      }
+
+      body {
+        position: relative;
+        background-image: url('/assets/jesus.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+
+        svg {
+          filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+        }
+
+        .hero {
+          height: 100vh;
+
+          display: flex;
+          flex-direction: column;
+
+          .banner {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: -1;
+
+            @include notDesktop {
+              display: none;
+            }
+          }
+
+          h1 {
+            margin-top: 10vh;
+            text-align: center;
+            font-size: 50px;
+
+            @include notDesktop {
+              font-size: 30px;
+              text-shadow: 0 0 10px black;
+              color: white;
+            }
+          }
+
+          h2 {
+            text-align: center;
+            font-size: 20px;
+
+            @include notDesktop {
+              margin-top: 40px;
+              font-size: 16px;
+              color: white;
+              text-shadow: 0 0 10px black;
+            }
+          }
+        }
+
+        p {
+          padding: 10px 0;
+          font-size: 22px;
+        }
+
+        #historia {
+          padding-top: 20vh;
+          padding-bottom: 50px;
+          min-height: 100vh;
+          margin-top: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.815);
+          display: flex;
+          gap: 75px;
+
+          background-image: url('/assets/papiro.jpg');
+          background-size: cover;
+          background-position: center;
+
+          @include notDesktop {
+            flex-direction: column;
+          }
+
+          video {
+            height: 600px;
+          }
+
+          .text {
+            padding: 20px;
+            max-width: 600px;
+          }
+        }
+
+        .socials {
+          display: flex;
+          gap: 20px;
+        }
+
+        #comprar {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          height: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="g-wrapper titles">
+        <img class="banner" src="/assets/banner.png" alt="" />
+        <h1>$GAMER</h1>
+
+        <h2>Discover how @TeTheGamer lost millions in one single click</h2>
+      </div>
+    </div>
+    <Menu />
+
+    <div id="historia">
+      <!--<img src="/assets/dogflork3.png" width="300px" alt="" />-->
+      <video src="public/assets/epico.mp4"></video>
+      <div class="text">
+        <p>An unofficial coin dedicated to TeTheGamer was created, and the developer sent 70% of the total supply to TeTheGamer.</p>
+
+        <p>
+          As the memecoin began pumping, TeTheGamer made the bold decision to burn 70% of the supply <b>valued in the millions</b> rather than.
+          This unprecedented move caused weak hands and panicked investors (jeeters) to nuke the price.
+        </p>
+
+        <p>
+          Now, $GamerCTO aims to carry forward the powerful message TeTheGamer left us: he is not our savior—we are our own saviors. A
+          strong and united community can achieve the goals they set for themselves. In the world of crypto, conviction and integrity are
+          everything.
+        </p>
+
+        <p>Let’s continue the legend of one of the greatest burns in crypto history and build something truly unforgettable. 🔥</p>
+      </div>
+    </div>
+
+    <div id="comprar">
+      <div class="socials">
+        <a href="https://t.me/tedgamer" target="_blank">
+          <Svg name="telegram" width="50" height="50" fill="white" />
+        </a>
+        <a href="https://x.com/GAMER_CTO" target="_blank">
+          <Svg name="twitter" width="50" height="50" fill="white" />
+        </a>
+
+        <a href="https://dexscreener.com/solana/9d1epmcxuv7e9grqpucviewavgguwhawqak5flkt1ana" target="_blank">
+          <Svg name="dexscreener" width="50" height="50" fill="white" />
+        </a>
+      </div>
+
+      <CA client:visible />
+    </div>
+    <a href="https://x.com/scriptedsol" style="position: absolute; bottom: 0; padding: 20px; color: white">Web created by @scriptedsol</a>
+  </body>
+</html>
+
+<script>
+  import { animReveal } from '@/utils/reveal'
+
+  window.onload = () => {
+    setTimeout(() => {
+      animReveal()
+    }, 200)
+  }
+</script>
