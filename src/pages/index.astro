@@ -11,6 +11,13 @@ const description =
 <style lang="scss" is:global>
   @use 'src/sass/global.scss';
   @use 'src/sass/mixins.scss';
+
+  .marca-de-agua {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    right: 20px;
+  }
 </style>
 
 <html lang="es">
@@ -37,6 +44,8 @@ const description =
   <body>
     <Hero client:load />
     <About />
+
+    <a class="marca-de-agua" href="https://x.com/scriptedsol">With 🩵 by @scriptedsol</a>
   </body>
 </html>
 
