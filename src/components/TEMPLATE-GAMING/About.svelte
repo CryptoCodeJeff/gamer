@@ -66,7 +66,7 @@
     <div class="text">
       <p>
         An unofficial coin dedicated to <a href="https://x.com/TeTheGamer">TeTheGamer</a>
-        was created, and the developer sent 70% of the total supply to TeTheGamer.
+        was created but the developer sent 70% of the total supply to TeTheGamer.
       </p>
 
       <p>
