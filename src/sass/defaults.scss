@@ -3,6 +3,8 @@
 *::after {
   box-sizing: border-box;
   color: var(--colorText);
+  font-family: 'Micro 5';
+  text-shadow: 2px 2px 0 black;
 }
 
 b {
@@ -46,6 +48,8 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--colorBackground);
   margin: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 button {

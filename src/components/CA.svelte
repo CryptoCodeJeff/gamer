@@ -18,16 +18,10 @@
     transition: 0.3s ease !important;
     text-align: center;
     width: 100%;
-    font-size: 24px;
-    background-image: url('/assets/banner.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 300px;
+    font-size: 50px;
 
     @include notDesktop {
-      font-size: 14px;
-      height: 200px;
+      font-size: 16px;
     }
 
     &:hover {

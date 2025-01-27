@@ -157,7 +157,7 @@
 
 <div class="section">
   <div class="game">
-    <h3>Pause the MISHA without hat</h3>
+    <h3>Pause the GAMER without hat</h3>
     <img src="/assets/memes/{images[index]}.jpg" alt="miau" width="300px" height="300px" />
 
     <button class="button-name" on:click={click}>
@@ -166,10 +166,10 @@
   </div>
 
   <div class="socials" class:win>
-    <a href="https://t.me/mishamemecoin" target="_blank">
+    <a href="https://t.me/GAMERmemecoin" target="_blank">
       <Svg name="telegram" />
     </a>
-    <a href="https://x.com/MishaOnSolana" target="_blank">
+    <a href="https://x.com/GAMEROnSolana" target="_blank">
       <Svg name="twitter" />
     </a>
     <a href="https://pump.fun/89kNPfsS8KPxjneKywgXri3sgGYYG7QZZaLiXxcTpump" target="_blank">

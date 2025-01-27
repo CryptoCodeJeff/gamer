@@ -1,6 +1,6 @@
-@import 'defaults.scss';
-@import 'variables.scss';
-@import 'mixins.scss';
+@use 'defaults.scss';
+@use 'variables.scss';
+@use 'mixins.scss' as *;
 
 .g-wrapper {
   max-width: $breakpoint;
