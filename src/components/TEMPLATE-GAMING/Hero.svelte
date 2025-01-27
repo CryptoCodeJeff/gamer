@@ -9,9 +9,11 @@
   .hero {
     border-top: 1px solid black;
     height: 100vh;
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 400% 400%;
-    animation: rainbow 10s ease infinite;
+    background-image: url('/assets/gaming/gamingte.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
     overflow: hidden;
 
     h1 {
@@ -23,68 +25,33 @@
       }
     }
 
-    .te {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+    .bg {
       width: 100%;
-      max-width: 300px;
-      filter: drop-shadow(0 0 20px rgb(255, 255, 255));
-
-      animation: motionDog 1s 1s;
-      transform-origin: bottom center;
-    }
-
-    @include notDesktop {
-      .quickscope,
-      .nyan,
-      .doge,
-      .gal,
-      .chillguy {
-        display: none;
-      }
-    }
-
-    .quickscope {
+      height: 100%;
       position: absolute;
-      right: 10%;
-      bottom: 0;
-      width: 100%;
-      max-width: 400px;
-      z-index: 1;
+      top: 0;
+      object-fit: cover;
+      object-position: bottom;
     }
 
     .nyan {
-      position: absolute;
-      left: 0px;
-      bottom: 20vh;
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .doge {
-      position: absolute;
-      right: 0px;
-      bottom: -100px;
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .chillguy {
-      position: absolute;
-      top: -100px;
-      max-width: 200px;
-      transform: rotate(200deg);
-    }
-
-    .gal {
-      position: absolute;
-      bottom: -100px;
+      position: fixed;
+      bottom: 30vh;
       left: 0;
-      max-width: 200px;
-      transform: rotate(20deg);
+
+      @include notDesktop {
+        display: none;
+      }
+    }
+    .snop {
+      position: fixed;
+      bottom: 0px;
+      right: 10px;
+      width: 150px;
+
+      @include notDesktop {
+        display: none;
+      }
     }
   }
 
@@ -108,32 +75,13 @@
       transform: rotateZ(0deg);
     }
   }
-
-  @keyframes rainbow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 </style>
 
 <div class="hero">
-  <div class="g-wrapper">
-    <h1>$GAMER</h1>
-    <CA />
+  <h1>$GAMER</h1>
+  <CA />
+  <img class="nyan" src="/assets/gaming/nyan.gif" alt="" />
+  <img class="snop" src="/assets/gaming/snop.gif" alt="" />
 
-    <img class="te" src="/assets/gaming/te.png" alt="" />
-    <img class="quickscope" src="/assets/gaming/quickscope.png" alt="" />
-    <img class="nyan" src="/assets/gaming/nyan.gif" alt="" />
-    <img class="doge" src="/assets/gaming/doge.png" alt="" />
-    <img class="chillguy" src="/assets/gaming/chillguy.png" alt="" />
-    <img class="gal" src="/assets/gaming/gal.png" alt="" />
-
-    <Socials />
-  </div>
+  <Socials />
 </div>

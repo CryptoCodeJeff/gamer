@@ -20,6 +20,17 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+.title {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  @include notDesktop {
+    font-size: 30px;
+  }
+}
+
 p,
 li {
   font-size: 20px;
